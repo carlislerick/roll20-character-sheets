@@ -1,0 +1,916 @@
+<main class="sheet-container">
+	<header class="header__container">
+		<details open class="header__collapse">
+			<summary>Character Info</summary>
+			<div class="header__content">
+						<label class="header__label" data-i18n="name" >Name:</label>
+						<input type="text" class="header__input" name="attr_character_name"/>
+						<label class="header__label" data-i18n="pronouns" >Pronouns:</label>
+						<input type="text" class="header__input" name="attr_character_pronouns"/>
+						<label class="header__label" data-i18n="circle">Circle:</label>
+						<input type="text" class="header__input" name="attr_character_circle"/>
+						<label class="header__label" data-i18n="style">Style:</label>
+						<input type="text" class="header__input" name="attr_character_style"/>
+						<label class="header__label" data-i18n="catalyst">Catalyst:</label>
+						<input type="text" class="header__input" name="attr_character_catalyst"/>
+						<label class="header__label" data-i18n="question">Question:</label>
+						<input type="text" class="header__input" name="attr_character_question"/>
+				</div>
+			</div>
+		</details>
+	</header>
+	<section class="lead-columns">
+		<div class="columns__col1">
+			<div class="drive__container">
+				<div class="drive__header">
+					<h3>NERVE</h3>
+					<span class="drive__max-header">Drives <br>Max</span>
+				</div>
+				<div class="drive-marks">
+					<div class="drive-marks__checklist">
+						<div class="drive-marks__column">
+							<label class="drive-mark__label">
+								<input class="drive-mark" type="checkbox" name="attr_nerve_current_one" >
+								<span></span>
+							</label>
+							<label class="drive-mark__label">
+								<input class="drive-mark" type="checkbox" name="attr_nerve_current_two" >
+								<span></span>
+							</label>
+							<label class="drive-mark__label">
+								<input class="drive-mark" type="checkbox" name="attr_nerve_current_three" >
+								<span></span>
+							</label>
+						</div>
+
+						<div class="drive-marks__column">
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_nerve_current_four" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_nerve_current_five" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_nerve_current_six" ><span></span></label>
+						</div>
+							
+						<div class="drive-marks__column">
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_nerve_current_seven" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_nerve_current_eight" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_nerve_current_nine" ><span></span></label>
+						</div>
+					</div>
+			
+					<div class="drive-marks__checklist">			
+
+						<div class="drive-marks__column">
+							<label class="drive-mark__label">
+								<input class="drive-mark__max" type="checkbox" name="attr_nerve_max_one" >
+								<span></span>
+							</label>
+							<label class="drive-mark__label">
+								<input class="drive-mark__max" type="checkbox" name="attr_nerve_max_two" >
+								<span></span>
+							</label>
+							<label class="drive-mark__label">
+								<input class="drive-mark__max" type="checkbox" name="attr_nerve_max_three" >
+								<span></span>
+							</label>
+						</div>
+							
+						<div class="drive-marks__column">
+							<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_nerve_max_four" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_nerve_max_five" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_nerve_max_six" ><span></span></label>
+						</div>
+								
+						<div class="drive-marks__column">
+							<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_nerve_max_seven" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_nerve_max_eight" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_nerve_max_nine" ><span></span></label>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="resistance__container">
+				<label><input class="resistance__checkbox" type="checkbox" name="attr_resistance_nerve1"><span></span>-----</label>
+				<label><input class="resistance__checkbox" type="checkbox" name="attr_resistance_nerve2"><span></span>-----</label>
+				<label><input class="resistance__checkbox" type="checkbox" name="attr_resistance_nerve3"><span></span></label>
+			</div>
+			<div class="actions__container">
+				<label class="action-gilded__label">
+					<input
+						class="action-gilded__checkbox"
+						name="attr_move_gilded"
+						type="checkbox">
+					<span></span>
+				</label>
+
+				<button
+					class="action-button__roll"
+					type="action"
+					name="act_moveCheck">
+						Move
+				</button>
+				
+				<span class="action-desc">
+					run, dodge, navigate
+				</span>
+			</div>
+
+			<div class="action-marks__container">
+				<label>
+					<input type="checkbox" name="attr_move_one">
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_move_two" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_move_three" >
+					<span></span>
+				</label>
+			</div>
+
+			<div class="actions__container">
+
+				<label class="action-gilded__label">
+					<input
+						class="action-gilded__checkbox"
+						name="attr_strike_gilded"
+						type="checkbox">
+					<span></span>
+				</label>
+
+				<button
+					class="action-button__roll"
+					type="action"
+					name="act_strikeCheck">
+						Strike
+				</button>
+
+				<span class="action-desc">punch, break, knock down</span>
+			</div>
+
+			<div class="action-marks__container">
+				<label>
+					<input type="checkbox" name="attr_strike_one" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_strike_two" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_strike_three" >
+					<span></span>
+				</label>
+			</div>
+
+			<div class="actions__container">
+
+				<label class="action-gilded__label">
+					<input
+						class="action-gilded__checkbox"
+						name="attr_control_gilded"
+						type="checkbox">
+					<span></span>
+				</label>
+				<button
+					class="action-button__roll" 
+					type="action"
+					name="act_controlCheck">
+						Control
+				</button>
+				<span class="action-desc">
+					drive, shoot, finesse
+				</span>
+
+			</div>
+			<div class="action-marks__container">
+				<label>
+					<input type="checkbox" name="attr_control_one" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_control_two" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_control_three" >
+					<span></span>
+				</label>
+			</div>
+			
+			<div class="drive__container">
+				<div class="drive__header">
+					<h3>CUNNING</h3>
+					<span class="drive__max-header">Drives <br>Max</span>
+				</div>
+				<div class="drive-marks">
+					<div class="drive-marks__checklist">
+							
+						<div class="drive-marks__column">
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_cunning_current_one" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_cunning_current_two" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_cunning_current_three" ><span></span></label>
+						</div>
+							
+						<div class="drive-marks__column">
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_cunning_current_four" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_cunning_current_five" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_cunning_current_six" ><span></span></label>
+						</div>
+							
+						<div class="drive-marks__column">
+					
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_cunning_current_seven" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_cunning_current_eight" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_cunning_current_nine" ><span></span></label>
+						</div>
+						
+					</div>
+					<div class="drive-marks__checklist">
+						
+					<div class="drive-marks__column">
+						<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_cunning_max_seven" ><span></span></label>
+						<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_cunning_max_eight" ><span></span></label>
+						<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_cunning_max_nine" ><span></span></label>
+					</div>
+						
+					<div class="drive-marks__column">
+						<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_cunning_max_four" ><span></span></label>
+						<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_cunning_max_five" ><span></span></label>
+						<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_cunning_max_six" ><span></span></label>
+					</div>
+						
+					<div class="drive-marks__column">
+						<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_cunning_max_one" ><span></span></label>
+						<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_cunning_max_two" ><span></span></label>
+						<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_cunning_max_three" ><span></span></label>
+					</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="resistance__container">
+				<label><input class="resistance__checkbox" type="checkbox" name="attr_resistance_cunning1"><span></span>-----</label>
+				<label><input class="resistance__checkbox" type="checkbox" name="attr_resistance_cunning2"><span></span>-----</label>
+				<label><input class="resistance__checkbox" type="checkbox" name="attr_resistance_cunning3"><span></span></label>
+			</div>
+			<div class="actions__container">
+				<label class="action-gilded__label">
+					<input
+						class="action-gilded__checkbox"
+						name="attr_sway_gilded"
+						type="checkbox" >
+					<span></span>
+				</label>
+				
+				<button
+					class="action-button__roll"
+					type="action"
+					name="act_swayCheck">
+						Sway
+				</button>
+
+				<span class="action-desc">
+					convince, command, consort
+				</span>
+			</div>
+
+			<div class="action-marks__container">
+				<label>
+					<input type="checkbox" name="attr_sway_one" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_sway_two" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_sway_three" >
+					<span></span>
+				</label>
+			</div>
+
+			<div class="actions__container">
+				<label class="action-gilded__label">
+					<input class="action-gilded__checkbox"
+					name="attr_read_gilded"
+					type="checkbox">
+					<span></span>
+				</label>
+				<button
+					class="action-button__roll"
+					type="action"
+					name="act_readCheck">
+						Read
+				</button>
+				<span class="action-desc">
+					interpret body language, spot lies, gather motive
+				</span>
+			</div>
+				
+			<div class="action-marks__container">
+				<label>
+					<input type="checkbox" name="attr_read_one" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_read_two" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_read_three" >
+					<span></span>
+				</label>
+			</div>
+
+			<div class="actions__container">
+				<label class="action-gilded__label">
+					<input
+						class="action-gilded__checkbox"
+						name="attr_hide_gilded"
+						type="checkbox">
+						<span></span>
+				</label>
+				<button
+					class="action-button__roll"
+					type="action"
+					name="act_hideCheck">
+						Hide
+				</button>
+				<span class="action-desc">
+					sneak, distract, sleight of hand
+				</span>
+			</div>
+
+			<div class="action-marks__container">
+				<label>
+					<input type="checkbox" name="attr_hide_one" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_hide_two" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_hide_three" >
+					<span></span>
+				</label>
+			</div>
+				
+			<div class="drive__container">
+				<div class="drive__header">
+					<h3>INTUITION</h3>
+					<span class="drive__max-header">Drives <br>Max</span>
+				</div>
+				<div class="drive-marks">
+					<div class="drive-marks__checklist">
+						<div class="drive-marks__column">
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_intuition_current_one" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_intuition_current_two" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_intuition_current_three" ><span></span></label>
+						</div>
+						
+						<div class="drive-marks__column">
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_intuition_current_four" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_intuition_current_five" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_intuition_current_six" ><span></span></label>
+						</div>
+						
+						<div class="drive-marks__column">
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_intuition_current_seven" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_intuition_current_eight" ><span></span></label>
+							<label class="drive-mark__label"><input class="drive-mark" type="checkbox" name="attr_intuition_current_nine" ><span></span></label>
+						</div>
+
+					</div>
+					<div class="drive-marks__checklist">
+						<div class="drive-marks__column">
+								<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_intuition_max_one" ><span></span></label>
+								<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_intuition_max_two" ><span></span></label>
+								<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_intuition_max_three" ><span></span></label>
+						</div>
+						<div class="drive-marks__column">
+			
+								<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_intuition_max_four" ><span></span></label>
+								<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_intuition_max_five" ><span></span></label>
+								<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_intuition_max_six" ><span></span></label>
+						</div>
+						<div class="drive-marks__column">
+								<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_intuition_max_seven" ><span></span></label>
+								<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_intuition_max_eight" ><span></span></label>
+								<label class="drive-mark__label"><input class="drive-mark__max" type="checkbox" name="attr_intuition_max_nine" ><span></span></label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="resistance__container">
+				<label><input class="resistance__checkbox" type="checkbox" name="attr_resistance_intuition1"><span></span>-----</label>
+				<label><input class="resistance__checkbox" type="checkbox" name="attr_resistance_intuition2"><span></span>-----</label>
+				<label><input class="resistance__checkbox" type="checkbox" name="attr_resistance_intuition3"><span></span></label>
+			</div>
+			<div class="actions__container">
+				<label class="action-gilded__label">
+					<input
+						class="action-gilded__checkbox"
+						name="attr_survey_gilded"
+						type="checkbox">
+						<span></span>
+				</label>
+				<button
+					class="action-button__roll"
+					type="action"
+					name="act_surveyCheck">
+						Survey
+				</button>
+				<span class="action-desc">
+					search, track, spot
+				</span>
+			</div>
+
+			<div class="action-marks__container">
+				<label>
+					<input type="checkbox" name="attr_survey_one" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_survey_two" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_survey_three" >
+					<span></span>
+				</label>
+			</div>
+			
+			<div class="actions__container">
+				<label class="action-gilded__label">
+				<input class="action-gilded__checkbox"
+					name="attr_focus_gilded"
+					type="checkbox" >
+					<span></span>
+				</label>
+				<button
+					class="action-button__roll"
+					type="action"
+					name="act_focusCheck">
+						Focus
+				</button>
+				<span class="action-desc">
+					inspect, analyze, remember
+				</span>
+			</div>
+
+			<div class="action-marks__container">
+				<label>
+					<input type="checkbox" name="attr_focus_one" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_focus_two" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_focus_three" >
+					<span></span>
+				</label>
+			</div>
+
+			<div class="actions__container">
+				<label class="action-gilded__label">
+					<input
+						class="action-gilded__checkbox"
+						name="attr_sense_gilded"
+						type="checkbox">
+					<span></span>
+				</label>
+				<button
+					class="action-button__roll"
+					type="action"
+					name="act_senseCheck">
+						Sense
+				</button>
+				<span class="action-desc">
+					attune, channel, reveal
+				</span>
+			</div>
+
+			<div class="action-marks__container">
+				<label>
+					<input type="checkbox" name="attr_sense_one" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_sense_two" >
+					<span></span>
+				</label>
+				<label>
+					<input type="checkbox" name="attr_sense_three" >
+					<span></span>
+				</label>
+			</div>
+		</div> <!-- columns__col1 -->
+		<div class="columns__col2">
+
+			<h4>
+				<label for="select-role">ROLE:</label>
+				<input name="attr_role" type="hidden" class="role-switch">
+			</h4>
+			<select id="select-role" name="attr_role">
+				<option value hidden>Select Role</option>
+				<option value="0">Face</option>
+				<option value="1">Muscle</option>
+				<option value="2">Scholar</option>
+				<option value="3">Slink</option>
+				<option value="4">Weird</option>
+			</select>
+
+			<h4>
+				<label for="select-speciality">SPECIALITY:</label>
+				<input name="attr_speciality" type="hidden" class="speciality-switch">
+			</h4>
+			<div id="select-speciality" class="speciality-selectors">
+				<input
+					class="role-selected"
+					name="attr_role"
+					value="0"
+					type="hidden"
+				>
+				<select id="spec-select-face" class="sheet-select__speciality-face" name="attr_speciality">
+					<option value hidden>Select Speciality</option>
+					<option value="0">Journalist</option>
+					<option value="1">Magician</option>
+				</select>
+				<select id="spec-select-muscle" class="sheet-select__speciality-muscle" name="attr_speciality">
+					<option value hidden>Select Speciality</option>
+					<option value="2">Explorer</option>
+					<option value="3">Solider</option>
+				</select>
+				<select id="spec-select-scholar" class="sheet-select__speciality-scholar" name="attr_speciality">
+					<option value hidden>Select Speciality</option>
+					<option value="4">Doctor</option>
+					<option value="5">Professor</option>
+				</select>
+				<select id="spec-select-slink" class="sheet-select__speciality-slink" name="attr_speciality">
+					<option value hidden>Select Speciality</option>
+					<option value="6">Criminal</option>
+					<option value="7">Detective</option>
+				</select>
+				<select id="spec-select-weird" class="sheet-select__speciality-weird" name="attr_speciality">
+					<option value hidden>Select Speciality</option>
+					<option value="8">Medium</option>
+					<option value="9">Occultist</option>
+				</select>
+			</div>
+
+			<!-- user adds abilities as repeating fields -->
+			<p class="repeating-fields">
+				<fieldset class="repeating_role-abilities">
+					<label>Ability<input type="text" name="attr_role-ability-name"></label>
+					<details>
+						<summary>Description</summary>
+						<textarea rows="2" name="attr_role-ability-description"></textarea>
+					</details>
+				</fieldset>
+			</p>
+
+			<!-- illumination keys are added by selecting from speciality list -->
+			<h4 class="illumination-keys__header">
+				<label for="illumination-keys__label">Illumination Keys</label>
+			</h4>
+
+			<fieldset class="repeating_illumination-keys">
+				<label>
+					<input
+						type="checkbox"
+						name="attr_illumination-key-marker"
+					>
+					<span></span>
+				</label>
+				<input type="text" name="attr_illumination-key">
+			</fieldset>
+
+		</div> <!-- columns__col2 -->
+		<div class="columns__col3">
+			<div class="marks">
+				<div class="marks-header">
+					<h3>MARKS</h3>
+				</div>
+				<div class="marks-checkboxes">
+					<label>
+						<input
+							type="checkbox"
+							name="attr_marks_body_1"
+						>
+						<span></span>
+					</label>
+					
+					<label>
+						<input
+							type="checkbox"
+							name="attr_marks_body_2"
+						>
+						<span></span>
+					</label>
+					
+					<label>
+						<input
+							type="checkbox"
+							name="attr_marks_body_3"
+						>
+						<span></span>
+					</label>
+					
+				</div>
+				<div class="marks-checkboxes">
+					<label>
+						<input
+							type="checkbox"
+							name="attr_marks_brain_1"
+						>
+						<span></span>
+					</label>
+					
+					<label>
+						<input
+							type="checkbox"
+							name="attr_marks_brain_2"
+						>
+						<span></span>
+					</label>
+					
+					<label>
+						<input
+							type="checkbox"
+							name="attr_marks_brain_3"
+						>
+						<span></span>
+					</label>
+					
+				</div>
+				<div class="marks-checkboxes">
+					<label>
+						<input
+							type="checkbox"
+							name="attr_marks_bleed_1"
+						>
+						<span></span>
+					</label>
+					
+					<label>
+						<input
+							type="checkbox"
+							name="attr_marks_bleed_2"
+						>
+						<span></span>
+					</label>
+					
+					<label>
+						<input
+							type="checkbox"
+							name="attr_marks_bleed_3"
+						>
+						<span></span>
+					</label>
+				</div>
+				<div><!-- blank column --></div>
+				<div class="marks-marktype">
+					BODY
+				</div>
+				
+				<div class="marks-marktype">
+					BRAIN
+				</div>
+				
+				<div class="marks-marktype">
+					BLEED
+				</div>
+			</div> <!-- marks -->
+			<div class="scars-container">
+				<h4>SCARS</h4>
+				<div>
+					<label>
+						<input
+							type="checkbox"
+							name="attr_scar-one">
+						<span></span>
+					</label>
+					<input name="attr_scar-desc-one">
+				</div>
+				<div>
+					<label>
+						<input
+							type="checkbox"
+							name="attr_scar-two">
+						<span></span>
+					</label>
+					<input name="attr_scar-desc-two">
+				</div>
+				<div>	
+					<label>
+						<input
+							type="checkbox"
+							name="attr_scar-three">
+						<span></span>
+					</label>
+					<input name="attr_scar-desc-three">
+				</div>
+			</div>
+			<div class="relationship-container">
+				<h4>RELATIONSHIPS</h4>
+				<div class="relationship-columns">
+					<input name="attr_relation-char-name-one">
+					<input name="attr_relation-question-one">
+				</div>
+				<div class="relationship-columns">
+					<input name="attr_relation-char-name-two">
+					<input name="attr_relation-question-two">
+				</div>
+				<div class="relationship-columns">
+					<input name="attr_relation-char-name-three">
+					<input name="attr_relation-question-three">
+				</div>
+				<div class="relationship-columns">
+					<input name="attr_relation-char-name-four">
+					<input name="attr_relation-question-four">
+				</div>
+			</div>
+			<div class="gear-container">
+				<h4>GEAR</h4>
+				<!-- user adds gear as repeating fields -->
+				<fieldset class="repeating_gear">
+					<input type="text" name="attr_gear">
+				</fieldset>
+			</div>
+			<div class="notes-container">
+				<h4>NOTES</h4>
+				<textarea name="attr_notes">
+			</div>
+
+		</div> <!-- columns__col3 -->
+	</section> <!-- columns -->
+</main>
+
+<rolltemplate class="sheet-rolltemplate-main">
+    <div class="sheet-template-container">
+        <h3>{{name}}</h3>
+        <div class="sheet-results">
+            <h4>Result = {{computed::roll1}}</h4>
+        </div>
+    </div>
+</rolltemplate>
+
+<script type="text/worker">
+
+let setAttrTotal = (name) => {
+	/* check which attrs are marked and set an attribute with the total */
+	let attrs = [name + '_one', name + '_two', name + '_three'];
+	console.log("attributes", attrs);
+
+	getAttrs(attrs, function(values) {
+		console.log('values before', values);
+		const total = Object.values(values).reduce((accum, item) => accum + (item === "on" ? 1 : 0), 0);
+		console.log('sum', total);
+		setAttrs({[`${name}_total`] : total});
+	});
+}
+
+let getRollString = function (name, attributTotal, gilded) {
+	rollString = '&{template:main} {{name=' + name + ' Check}} {{roll1=[[?{Drive used|0}d6 +';
+	if (attributTotal > 0 ) { // if there were >0attribute points
+		if(gilded) {
+			rollString = rollString + (attributTotal - 1) + 'd6 + 1d6]]}}';
+		} else {
+			rollString = rollString + attributTotal + 'd6]]}}';
+		}
+	} else {
+		rollString = rollString + '2d6kl1]]}}'
+	}
+	return rollString;
+};
+
+let rollCheck = function (name) {
+	let rollString = "";
+	let attrs = [name+ "_total", name + "_gilded"];
+	console.log(attrs);
+	getAttrs(attrs, function(values) {
+		let total = values[attrs[0]];
+		let gilded = (values[attrs[1]] === "on" ? true : false);
+		console.log( total, gilded );
+		name = name.charAt(0).toUpperCase() + name.slice(1);
+
+		rollString = getRollString(name, total, gilded)
+
+		startRoll(rollString, (results) => {
+			const rolls = results.results.roll1.dice;
+			console.log("roll", results);
+			let computed = '';
+
+			if (results.results.roll1.expression.includes('kl') && results.results.roll1.expression.includes('0d6')) {
+				// no attribute points roll
+				computed = results.results.roll1.result;
+			} else if (results.results.roll1.expression.includes('kl') && !results.results.roll1.expression.includes('0d6')) {
+				// no attributes points roll with drive dice
+				results.results.roll1.rolls[0].results.forEach(function (item, index, array) {
+					if (index === array.length - 1){
+						computed += item;
+					} else {
+						computed += item + ', ';
+					}
+				});
+			} else if(total > 0 && gilded == 1) {
+				rolls.forEach(function (item, index, array) {
+					if (index === array.length - 1){
+						computed += item + ' gilded';
+					} else {
+						computed += item + ', ';
+					}
+				});
+			} else if (total > 0) {
+				rolls.forEach(function (item, index, array) {
+					if (index === array.length - 1){
+						computed += item;
+					} else {
+						computed += item + ', ';
+					}
+				});
+			} else {
+				computed = results.results.roll1.result;
+			}
+
+			finishRoll(
+				results.rollId,
+				{
+					roll1: computed
+				}
+			);
+		});
+	});
+};
+
+on("sheet:opened", () => {
+	getAttrs(["version", "sheeetType"], (sheetInfo) => {
+		const version = parseInt(sheetInfo.version) || 0;
+
+	console.log("sheet version is ", version);
+
+	});
+});
+
+on("change:move_one change:move_two change:move_three", function() {
+	setAttrTotal('move');
+});
+on("change:strike_one change:strike_two change:strike_three", function() {
+	setAttrTotal('strike');
+});
+on("change:control_one change:control_two change:control_three", function() {
+	setAttrTotal('control');
+});
+
+on("change:sway_one change:sway_two change:sway_three", function() {
+	setAttrTotal('sway');
+});
+on("change:read_one change:read_two change:read_three", function() {
+	setAttrTotal('read');
+});
+on("change:hide_one change:hide_two change:hide_three", function() {
+	setAttrTotal('hide');
+});
+
+on("change:survey_one change:survey_two change:survey_three", function() {
+	setAttrTotal('survey');
+});
+on("change:focus_one change:focus_two change:focus_three", function() {
+	setAttrTotal('focus');
+});
+on("change:sense_one change:sense_two change:sense_three", function() {
+	setAttrTotal('sense');
+});
+
+on("clicked:moveCheck", function(name) {
+	rollCheck("move");
+});
+on("clicked:strikeCheck", function(name) {
+	rollCheck("strike");
+});
+on("clicked:controlCheck", function(name) {
+	rollCheck("control");
+});
+
+on("clicked:swayCheck", function(name) {
+	rollCheck("sway");
+});on("clicked:readCheck", function(name) {
+	rollCheck("read");
+});on("clicked:hideCheck", function(name) {
+	rollCheck("hide");
+});
+
+on("clicked:surveyCheck", function(name) {
+	rollCheck("survey");
+});on("clicked:focusCheck", function(name) {
+	rollCheck("focus");
+});on("clicked:senseCheck", function(name) {
+	rollCheck("sense");
+});
+
+</script>

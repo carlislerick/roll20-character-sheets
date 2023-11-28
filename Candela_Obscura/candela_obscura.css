@@ -1,0 +1,450 @@
+/* clear styles 
+.ui-dialog .charsheet select,
+.ui-dialog .charsheet textarea,
+.ui-dialog .charsheet input,
+.ui-dialog .charsheet .uneditable-input,
+.ui-dialog .charsheet label,
+.ui-dialog .charsheet button{
+  all: unset;
+}*/
+
+ul.nav-tabs.nav{
+    position:sticky;
+    top:0;
+    background-color:white;
+    z-index:9999;
+}
+
+/* header */
+.header__content {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 5fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    & .header__label {
+        display: inline;
+    }
+
+    & .header__input {
+        width: auto;
+    }
+}
+
+
+
+/* all columns */
+.lead-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.columns__col1 {
+    border: 1px solid #333;
+    padding:5px;
+}
+
+.columns__col3 {
+    border: 1px solid #333;
+    padding:5px;
+}
+
+/* drive container */
+.drive__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.drive__header {
+    background-color: #333333;
+    display: flex;
+    container-type: inline-size;
+}
+
+.drive__header > h3{
+    color: white;
+    display: inline;
+    padding-right: .5rem;
+    padding-left: .5rem;
+
+}
+
+@container (min-width: 8rem) {
+    .drive__header > h3 {
+        font-size: 17px;
+    }
+}
+
+.drive__max-header {
+    color: white;
+    font-size: 12px;
+    font-style: italic;
+    align-self: center;
+    width: 100%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.drive-marks {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: #333333;
+    padding-top: .5rem;
+}
+
+.drive-marks__checklist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+}
+
+.drive-marks__column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: baseline;
+    gap: .4rem
+}
+
+label.drive-mark__label {
+	display: inline;
+	padding: 0px 0px 0px 0px;
+	width: 25%;
+    margin: unset;
+}
+
+input.drive-mark,
+input.drive-mark__max {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+}
+
+input.drive-mark + span {
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 25px;
+    background: white;    
+}
+
+input.drive-mark__max + span {
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: white;
+}
+
+input[type=checkbox]:checked + span {
+    background: grey;
+  }
+
+.resistance__container {
+    grid-area: resistance;
+    text-align: end;
+    padding-right: 2rem;
+}
+
+.resistance__container > label {
+    display: inline ;
+	padding: 0px 0px 0px 0px;
+    margin: unset;
+}
+
+input.resistance__checkbox {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+}
+
+input.resistance__checkbox + span {
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: white;
+    border: 1px black solid;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
+/* end drives & resistance */
+
+/* actions container */
+.actions__container {
+    display: grid;
+    grid-template-areas: 
+    "gilded action desc"
+    "gilded marks marks";
+    grid-template-columns: 1fr 4fr 8fr;
+}
+
+label.action-gilded__label {
+    grid-area: gilded;
+    display: inline ;
+	padding: 0px 0px 0px 0px;
+    margin: unset;
+}
+
+input.action-gilded__checkbox {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+}
+
+label.action-gilded__label span {
+    display: inline-block;
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: white;
+    border: 2px black solid;
+	transform: rotate(45deg);
+}
+
+.action-button__roll {
+    grid-area: action;
+    border: none;
+    background-color: unset;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.action-desc {
+    grid-area: desc;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.action-marks__container {
+    grid-area: marks;
+    margin-left: 3rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.action-marks__container label {
+    display: inline;
+}
+
+.action-marks__container label input {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+}
+
+.action-marks__container label span {
+    display: inline-block;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 2px black solid;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+/* end actions container */
+
+/* column 2 or middle column */
+
+
+.charsheet .repcontainer[data-groupname="repeating_role-abilities"] > .repitem {
+    margin-bottom: 1rem;
+}
+
+/* based on a pattern here https://wiki.roll20.net/CSS_Wizardry#Show.2FHide_Areas under "Dropdown" */
+.speciality-selectors .sheet-select__speciality-face,
+.speciality-selectors .sheet-select__speciality-muscle,
+.speciality-selectors .sheet-select__speciality-scholar,
+.speciality-selectors .sheet-select__speciality-slink,
+.speciality-selectors .sheet-select__speciality-weird {
+    display: none;
+}
+
+.speciality-selectors input[value="0"] ~ .sheet-select__speciality-face,
+.speciality-selectors input[value="1"] ~ .sheet-select__speciality-muscle,
+.speciality-selectors input[value="2"] ~ .sheet-select__speciality-scholar,
+.speciality-selectors input[value="3"] ~ .sheet-select__speciality-slink,
+.speciality-selectors input[value="4"] ~ .sheet-select__speciality-weird {
+    display: block;
+}
+
+.illumination-keys_all .illumination-key-journalist,
+.illumination-keys_all .illumination-key-magician,
+.illumination-keys_all .illumination-key-explorer,
+.illumination-keys_all .illumination-key-soldier,
+.illumination-keys_all .illumination-key-doctor,
+.illumination-keys_all .illumination-key-professor,
+.illumination-keys_all .illumination-key-criminal,
+.illumination-keys_all .illumination-key-detective,
+.illumination-keys_all .illumination-key-medium,
+.illumination-keys_all .illumination-key-occultist {
+    display: none;
+}
+
+.illumination-keys_all .illumination-key[value="0"] ~ div.illumination-key-journalist, 
+.illumination-keys_all .illumination-key[value="1"] ~ div.illumination-key-magician,
+.illumination-keys_all .illumination-key[value="2"] ~ div.illumination-key-explorer,
+.illumination-keys_all .illumination-key[value="3"] ~ div.illumination-key-soldier,
+.illumination-keys_all .illumination-key[value="4"] ~ div.illumination-key-doctor,
+.illumination-keys_all .illumination-key[value="5"] ~ div.illumination-key-professor,
+.illumination-keys_all .illumination-key[value="6"] ~ div.illumination-key-criminal,
+.illumination-keys_all .illumination-key[value="7"] ~ div.illumination-key-detective,
+.illumination-keys_all .illumination-key[value="8"] ~ div.illumination-key-medium,
+.illumination-keys_all .illumination-key[value="9"] ~ div.illumination-key-occultist {
+    display: block;
+}
+
+.illumination-keys__header {
+    margin-top: 2rem;
+}
+
+.repcontainer[data-groupname="repeating_illumination-keys"] > .repitem {
+    display:grid;
+    grid-template-columns: 1fr 20fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.repcontainer[data-groupname="repeating_illumination-keys"] > .repitem label {
+    display: inline ;
+	padding: 0px 0px 0px 0px;
+    margin: unset;
+
+    & span {
+        display: inline-block;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: white;
+        border: 1px black solid;
+        border-radius: 50%;
+        margin-top: 1rem;
+    }
+
+    & input {
+        visibility: hidden;
+        height: 0px ! important;
+        width: 0px;
+        position: absolute;
+    }
+
+    & input:checked + span {
+        background: grey;
+      }
+}
+
+.repcontainer[data-groupname="repeating_illumination-keys"] > .repitem input {
+    display: inline-flex;
+}
+
+
+/* column 3 styles */
+.marks {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.marks-header {
+    display: flex;
+    color:white;
+    background-color: #333333;
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+.marks-header h3 {
+    color: white;
+}
+
+.marks-checkboxes label {
+    display: inline ;
+	padding: 0px 0px 0px 0px;
+	width: 25%;
+    margin: unset;
+}
+
+.marks-checkboxes {
+    background-color: #333333;
+    padding-top: .5rem;
+}
+
+.marks-checkboxes label input {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+}
+
+.marks-checkboxes label span {
+  display: inline-block;
+  content: '';
+  width: 1rem;
+  height: 3rem;
+  background-color: white;
+}
+
+input.marks__checkbox:checked + span {
+  background: grey;
+}
+
+.scars-container div {
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    gap: 1rem;
+
+    & input {
+        width: unset;
+    }
+}
+
+.scars-container label {
+    display: inline ;
+	padding: 0px 0px 0px 0px;
+    margin: unset;
+
+    & input {
+        visibility: hidden;
+        height: 0px ! important;
+        width: 0px;
+        position: absolute;
+    }
+
+    & span {
+        display: inline-block;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: white;
+        border: 1px black solid;
+        border-radius: 50%;
+        margin-top: 1rem;
+    }
+}
+
+.relationship-container {
+    margin-top: 2rem;
+}
+.relationship-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    & input {
+        display: inline;
+        width:100%;
+    }
+}
+
+.gear-container {
+    margin-top: 2rem;
+}
+
+.notes-container {
+    margin-top: 2rem;
+}
