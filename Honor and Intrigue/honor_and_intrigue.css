@@ -1,0 +1,7 @@
+.root {
+    width: 800px;
+
+    span {
+        padding-right: 5px;
+    }
+}
