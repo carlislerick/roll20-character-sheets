@@ -1,117 +1,391 @@
-<main class="root"><h3>BACKGROUND</h3>
-<span>Name</span>
-<input type="text" name="attr_character_name">
-<span>Origin</span>
-<input type="textarea" name="attr_origin">
-<span>Motivation</span>
-<input type="textarea" name="attr_motivation">
-<span>Description</span>
-<input type="textarea" name="attr_description">
-<span>Languages</span>
-<input type="textarea" name="attr_languages">
-<span>Boons</span>
-<input type="textarea" name="attr_boons">
-<span>Flaws</span>
-<input type="textarea" name="attr_flaws">
+<main class="root">
+    <h1>HONOR & INTRIGUE</h1>
 
-<h3>QUALITIES</h3>
-<span>Might</span><input type="number" name="attr_might">
-<span>Daring</span><input type="number" name="attr_daring">
-<span>Savvy</span><input type="number" name="attr_savvy">
-<span>Flair</span><input type="number" name="attr_flair">
+    <header class="grid_column_2">
+        <div>
+            <h5>Name</h5>
+            <input type="text" name="attr_character_name">
+            <h5>Advancement p62</h5>
+            <input class="attribute_advancement" type="number" name="attr_advancement">
+        </div>
 
-<h3>COMBAT</h3>
-<span>Brawl</span><input type="number" name="attr_brawl">
-<span>Melee</span><input type="number" name="attr_melee">
-<span>Ranged</span><input type="number" name="attr_ranged">
-<span>Defense</span><input type="number" name="attr_defense">
+        <div>
+            <span>Description</span>
+            <textarea name="attr_description" class="textarea_default" />
+        </div>
+        <div>
+            <span>Origin</span>
+            <textarea name="attr_origin" class="textarea_default" />
+        </div>
+        <div>
+            <span>Motivation p17</span>
+            <textarea name="attr_motivation" class="textarea_default" />
+        </div>
+    </header>
 
-<h3>CAREERS</h3>
-<fieldset class="repeating_careers" style="margin-bottom: 5px;">
-    <input type="textarea" name="attr_careerName">
-    <input type="number" name="attr_careerRating">
-    <select name="attr_qualityBase" style="width: 70px">
-        <option value="">-</option>
-        <option value="might">Might</option>
-        <option value="daring">Daring</option>
-        <option value="savvy">Savvy</option>
-        <option value="flair">Flair</option>
-    </select>
-</fieldset>
+    <section>
+        <button type="roll" value="/roll 1d6 + @{savvy} &{tracker}" name="roll_initiative">Initiative</button>
+    </section>
 
+    <section class="grid_column_3">
+        <div>
+            <h3>QUALITIES</h3>
+            <div class="grid_attributes_inner">
+                <h4>Might</h4>
+                <input type="number" name="attr_might">
+                <div>
+                    <button type="action" name="act_might" data-attribute="kl" class="diceImage button_kl">0</button>                    
+                    <button type="action" name="act_might" class="diceImage">0</button>
+                    <button type="action" name="act_might" data-attribute="kh" class="diceImage button_kh">0</button>
+                </div>
+            </div>
+            <div class="grid_attributes_inner">
+                <h4>Daring</h4>
+                <input type="number" name="attr_daring">
+                <div>
+                    <button type="action" name="act_daring" data-attribute="kl" class="diceImage button_kl">0</button>                    
+                    <button type="action" name="act_daring" class="diceImage">0</button>
+                    <button type="action" name="act_daring" data-attribute="kh" class="diceImage button_kh">0</button>
+                </div>
+            </div>
+            <div class="grid_attributes_inner">
+                <h4>Savvy</h4>
+                <input type="number" name="attr_savvy">
+                <div>
+                    <button type="action" name="act_savvy" data-attribute="kl" class="diceImage button_kl">0</button>                    
+                    <button type="action" name="act_savvy" class="diceImage">0</button>
+                    <button type="action" name="act_savvy" data-attribute="kh" class="diceImage button_kh">0</button>
+                </div>
+            </div>
+            <div class="grid_attributes_inner">
+                <h4>Flair</h4>
+                <input type="number" name="attr_flair">
+                <div>
+                    <button type="action" name="act_flair" data-attribute="kl" class="diceImage button_kl">0</button>                    
+                    <button type="action" name="act_flair" class="diceImage">0</button>
+                    <button type="action" name="act_flair" data-attribute="kh" class="diceImage button_kh">0</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>COMBAT</h3>
+            <div class="grid_attributes_inner">
+                <h4>Brawl</h4>
+                <input type="number" name="attr_brawl">
+                <div>
+                    <button type="action" name="act_brawl" data-attribute="kl" class="diceImage button_kl">0</button>                    
+                    <button type="action" name="act_brawl" class="diceImage">0</button>
+                    <button type="action" name="act_brawl" data-attribute="kh" class="diceImage button_kh">0</button>
+                </div>
+            </div>
+            <div class="grid_attributes_inner">
+                <h4>Melee</h4>
+                <input type="number" name="attr_melee">
+                <div>
+                    <button type="action" name="act_melee" data-attribute="kl" class="diceImage button_kl">0</button>                    
+                    <button type="action" name="act_melee" class="diceImage">0</button>
+                    <button type="action" name="act_melee" data-attribute="kh" class="diceImage button_kh">0</button>
+                </div>
+            </div>
+            <div class="grid_attributes_inner">
+                <h4>Ranged</h4>
+                <input type="number" name="attr_ranged">
+                <div>
+                    <button type="action" name="act_ranged" data-attribute="kl" class="diceImage button_kl">0</button>                    
+                    <button type="action" name="act_ranged" class="diceImage">0</button>
+                    <button type="action" name="act_ranged" data-attribute="kh" class="diceImage button_kh">0</button>
+                </div>
+            </div>
+            <div class="grid_attributes_inner">
+                <h4>Defense</h4>
+                <input type="number" name="attr_defense">
+                <div>
+                    <button type="action" name="act_defense" data-attribute="kl" class="diceImage button_kl">0</button>                    
+                    <button type="action" name="act_defense" class="diceImage">0</button>
+                    <button type="action" name="act_defense" data-attribute="kh" class="diceImage button_kh">0</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>CAREERS</h3>
+            <fieldset class="repeating_careers" style="margin-bottom: 5px;">
+                <input class="input-careerName" type="text" name="attr_careerName">
+                <input type="number" name="attr_careerRank">
+                <select name="attr_qualityBase" style="width: 70px">
+                    <option value="">-</option>
+                    <option value="might">Might</option>
+                    <option value="daring">Daring</option>
+                    <option value="savvy">Savvy</option>
+                    <option value="flair">Flair</option>
+                </select>
+                <div style="display: inline;">
+                <button type="action" name="act_activate" data-attribute="kl" class="diceImage button_kl">0</button>                    
+                <button type="action" name="act_activate" class="diceImage">0</button>
+                <button type="action" name="act_activate" data-attribute="kh" class="diceImage button_kh">0</button>
+            </div>
+            </fieldset>
+        </div>
+    </section>
 
-<h3>LIFEBLOOD</h3>
-<input type="number" name="attr_lifeblood_max"><input type="number" name="attr_lifeblood_current">
-<h3>FORTUNE</h3><h3>COMPOSURE</h3><h3>ADVANCEMENT</h3>
-<h3>EQUIPMENT</h3>
-<h3>BACKSTORY</h3>
+    <section class="section_counters">
+        
+        <div>
+            <h3>LIFEBLOOD p14</h3>
+            <div>
+                <input hidden type="number" name="attr_lifeblood">Max:<span name="attr_lifeblood"></span><input type="number" name="attr_lifebloodCurrent">
+            </div>
+        </div>
+        <div>
+            <h3>FORTUNE p14</h3>
+            <div>
+                <input hidden type="number" name="attr_fortune">Starting:<span name="attr_fortune"></span><input type="number" name="attr_fortuneCurrent">
+            </div>
+        </div>
+        <div>
+            <h3>COMPOSURE p16</h3>
+            <input type="number" name="attr_composure">
+        </div>
+        <div>
+            <h3>ADVANTAGE p67</h3>
+            <input class="attribute_advantage" type="number" name="attr_advantage">
+        </div>
+    </section>
 
+    <h3>MANEUVERS</h3>
+    <fieldset class="repeating_maneuvers" style="margin-bottom: 5px;">
+        <span></span>
+        <input type="checkbox" name="attr_mastery" value="false">
+        <select name="attr_actionType" style="width: 80px">
+            <option value="major">Major</option>
+            <option value="minor">Minor</option>
+            <option value="reaction">Reaction</option>
+        </select>
+        <input type="text" name="attr_maneuverName" value="">
+        <select name="attr_qualityBase" style="width: 70px">
+            <option value="might">Might</option>
+            <option value="daring">Daring</option>
+            <option value="savvy">Savvy</option>
+            <option value="flair">Flair</option>
+        </select>
+        <select name="attr_combatBase"  style="width: 70px">
+            <option value="brawl">Brawl</option>
+            <option value="melee">Melee</option>
+            <option value="ranged">Ranged</option>
+            <option value="defense">Defense</option>
+        </select>
+        <span style="font-weight: 600;">VS</span>
+        <select name="attr_verses"  style="width: 70px">
+            <option value="brawl">Brawl</option>
+            <option value="melee">Melee</option>
+            <option value="ranged">Ranged</option>
+            <option value="defense">Defense</option>
+            <option value="might">Might</option>
+            <option value="daring">Daring</option>
+            <option value="savvy">Savvy</option>
+            <option value="flair">Flair</option>
+        </select>
+        <div style="display: inline;">
+            <button type="action" name="act_activate" data-attribute="kl" class="diceImage button_kl">0</button>                    
+            <button type="action" name="act_activate" class="diceImage">0</button>
+            <button type="action" name="act_activate" data-attribute="kh" class="diceImage button_kh">0</button>
+        </div>
+        <div>
+            <textarea class="textarea_default" name="attr_maneuversDescription">
+        </div>
 
-<h3>MANEUVERS</h3>
-<fieldset class="repeating_maneuvers" style="margin-bottom: 5px;">
-    <span></span>
-    <input type="checkbox" name="attr_mastery" value="false">
-    <input type="text" name="attr_maneuverName" value="">
-    <select name="attr_qualityBase" style="width: 70px">
-        <option value="might">Might</option>
-        <option value="daring">Daring</option>
-        <option value="savvy">Savvy</option>
-        <option value="flair">Flair</option>
-    </select>
-    <select name="attr_combatBase"  style="width: 70px">
-        <option value="brawl">Brawl</option>
-        <option value="melee">Melee</option>
-        <option value="ranged">Ranged</option>
-        <option value="defense">Defense</option>
-    </select>
-    <span style="font-weight: 600;">VS</span>
-    <select name="attr_verses"  style="width: 70px">
-        <option value="brawl">Brawl</option>
-        <option value="melee">Melee</option>
-        <option value="ranged">Ranged</option>
-        <option value="defense">Defense</option>
-    </select>
-    <button type="action" name="act_activate" >execute</button>
-    <div>
-        <input type="textarea" name="attr-maneuversdescription">
-    </div>
+    </fieldset>
+    
+    <h3 style="margin: 2rem 0 0;">EQUIPMENT</h3>
+    <textarea name="attr_equipment" class="textarea_default" />
 
-</fieldset>
+    <h3 style="margin: 2rem 0 0;">BACKGROUND</h3>
+   
+    <span>Languages</span>
+    <textarea name="attr_languages" class="textarea_default" />
+    <span>Boons</span>
+    <textarea name="attr_boons" class="textarea_default" />
+    <span>Flaws</span>
+    <textarea name="attr_flaws" class="textarea_default" />
+    <h3>BACKSTORY p17</h3>
+        <textarea name="attr_backstory" class="textarea_default" />
+
 </main>
 
 <script type="text/worker">
+    // this library allows the use of the async getAttrsAsync and setAttrsAsync https://github.com/onyxring/orcsAsync
     function isRunningOnServer(){return self.dispatchEvent==undefined}function setActiveCharacterId(charId){var oldAcid=getActiveCharacterId();var msg={id:"0",type:"setActiveCharacter",data:charId};if(isRunningOnServer()==false){var ev=new CustomEvent("message");ev.data=msg;self.dispatchEvent(ev)}else{self.onmessage({data:msg})}return oldAcid}var _sIn=setInterval;setInterval=function(callback,timeout){var acid=getActiveCharacterId();_sIn(function(){var prevAcid=setActiveCharacterId(acid);callback();setActiveCharacterId(prevAcid)},timeout)};var _sto=setTimeout;setTimeout=function(callback,timeout){var acid=getActiveCharacterId();_sto(function(){var prevAcid=setActiveCharacterId(acid);callback();setActiveCharacterId(prevAcid)},timeout)};function getAttrsAsync(props){var acid=getActiveCharacterId();var prevAcid=null;return new Promise((resolve,reject)=>{prevAcid=setActiveCharacterId(acid);try{getAttrs(props,values=>{resolve(values)})}catch{reject()}}).finally(()=>{setActiveCharacterId(prevAcid)})}function setAttrsAsync(propObj,options){var acid=getActiveCharacterId();var prevAcid=null;return new Promise((resolve,reject)=>{prevAcid=setActiveCharacterId(acid);try{setAttrs(propObj,options,values=>{resolve(values)})}catch{reject()}}).finally(()=>{setActiveCharacterId(prevAcid)})}function getSectionIDsAsync(sectionName){var acid=getActiveCharacterId();var prevAcid=null;return new Promise((resolve,reject)=>{prevAcid=setActiveCharacterId(acid);try{getSectionIDs(sectionName,values=>{resolve(values)})}catch{reject()}}).finally(()=>{setActiveCharacterId(prevAcid)})}
 
-    on("clicked:repeating_maneuvers:activate", async (info) => {
-      console.log("Activate button clicked");
+    // roll qualities/combat
+    on("clicked:might clicked:daring clicked:savvy clicked:flair clicked:brawl clicked:melee clicked:ranged clicked:defense", async eventInfo => {
+
+        // get attribute value
+        const attribute = eventInfo.triggerName.replace('clicked:', '');
+        const rollData = await getAttrsAsync([
+            attribute,
+            "character_name"
+        ]);
+        const attributeValue = rollData[attribute];
+
+        //this tells if its a kh or kl
+        const typeOfRoll = eventInfo.htmlAttributes['data-attribute'];
+        console.log('rolltype', typeOfRoll);
+        const diceToRoll = (modifier) => {
+            return !modifier ? 'dice2' : 'dice3';
+        }
+        //const rollTemplateData = `&{template:base} {{autoSuccessFailure=[[0]]}} {{name=${attribute}}} {{character=${rollData.character_name}}} {{roll1=[[${diceRollData}]]}}`;
+        // const rollTemplateData = `{{roll1=[[2d6]]}}`;
+        // const rollTemplateData2 = `{{roll1=[[{3d6}${typeOfRoll}2]]}}`;
+        // these are working
+        // const rollToUse = {
+//            dice3:`{{roll1=[[{3d6}${typeOfRoll}2]]}}`,
+            //dice2:`{{roll1=[[2d6]]}}`,
+        //}
+
+        const rollToUse = {
+            dice3:`&{template:base} {{name=${attribute}}} {{character=${rollData.character_name}}} {{roll1=[[{3d6}${typeOfRoll}2+${rollData[attribute]}[${attribute.toUpperCase()}]+?{Modifier|0}]]}} {{name=${attribute.toUpperCase()}}} `,
+            dice2:`&{template:base} {{name=${attribute}}} {{character=${rollData.character_name}}} {{roll1=[[2d6+${rollData[attribute]}[${attribute.toUpperCase()}]+?{Modifier|0}]]}} {{name=${attribute.toUpperCase()}}} `,
+        }
+
+        const rollThis = rollToUse[diceToRoll(typeOfRoll)];
+
+        startRoll(rollThis, (results) => {
+                finishRoll(results.rollId);
+            });
+    });
+
+    // LIFEBLOOD
+    on("change:might sheet:opened", eventInfo => {
+        getAttrs(["might"], (values) => {
+            const might = parseInt(values.might) || 0;
+            const lifeblood = 10 + might;
+            setAttrs({
+                "lifeblood":lifeblood
+            });
+        });
+    });
+
+    // FORTUNE
+    on("change:flair sheet:opened", eventInfo => {
+        getAttrs(["flair"], (values) => {
+            const attribute = parseInt(values.flair) || 0;
+            const maxValue = 3 + attribute;
+            setAttrs({
+                "fortune":maxValue
+            });
+        });
+    });
+
+    // character roll on career
+    on("clicked:repeating_careers:activate", async (eventInfo) => {
+        // get the values from the row the user clicked on
+        const rollData = await getAttrsAsync([
+            "repeating_careers_qualityBase",
+            "repeating_careers_careerName",
+            "repeating_careers_careerRank",
+            "character_name"
+        ]);
+        // here we need to find the rating for the attributes that were selected
+        const rollNumbers = await getAttrsAsync([
+            rollData.repeating_careers_qualityBase,
+        ]);
+        const qualityBase = parseInt(rollNumbers[rollData.repeating_careers_qualityBase]);
+        const careerRank = parseInt(rollData.repeating_careers_careerRank);
+
+        //this tells if its a kh or kl
+        const typeOfRoll = eventInfo.htmlAttributes['data-attribute'];
+        console.log('rolltype', typeOfRoll);
+        const diceToRoll = (modifier) => {
+            return !modifier ? 'dice2' : 'dice3';
+        }
+
+        const templateCareerName = rollData.repeating_careers_careerName || "you need to add a name";
+        // const rollTemplateData = `&{template:base}  {{character=${rollData.character_name}}} {{roll1=[[2d6+${careerRank}[career] + ${qualityBase}[quality] + ?{Modifier|0}]]}}`;
+        const rollToUse = {
+            dice3:`{{roll1=[[{3d6}${typeOfRoll}2+${careerRank}[career] + ${qualityBase}[quality] + ?{Modifier|0}]]}} &{template:base} {{name=${templateCareerName}}} {{character=${rollData.character_name}}}`,
+            dice2:`{{roll1=[[2d6+${careerRank}[career] + ${qualityBase}[quality] + ?{Modifier|0}]]}} &{template:base} {{name=${templateCareerName}}} {{character=${rollData.character_name}}}`,
+        };
+        const rollThis = rollToUse[diceToRoll(typeOfRoll)];
+        startRoll(rollThis, (results) => {
+            finishRoll(results.rollId);
+        });
+
+    });
+    // character roll on maneuver
+    on("clicked:repeating_maneuvers:activate", async (eventInfo) => {
+        // get the values from the row the user clicked on
       const rollData = await getAttrsAsync([
         "repeating_maneuvers_qualityBase",
         "repeating_maneuvers_combatBase",
-        "repeating_maneuvers_verses"
+        "repeating_maneuvers_verses",
+        "repeating_maneuvers_maneuverName",
+        "repeating_maneuvers_actionType",
+        "character_name"
         ]);
-        console.log("roll data is ", rollData);
+
+        // here we need to find the rating for the attributes that were selected
         const rollNumbers = await getAttrsAsync([
             rollData.repeating_maneuvers_qualityBase,
             rollData.repeating_maneuvers_combatBase
         ]);
-        
-        console.log("roll numbers is ", rollNumbers[rollData.repeating_maneuvers_qualityBase]);
-        startRoll(
-            "&{template:test} {{name=Core Mechanic Roll}} {{roll1=[[2d6]]}}", (results) => {
-                let total = results.results.roll1.result;
-                let computed = total + parseInt(rollNumbers[rollData.repeating_maneuvers_qualityBase]) + parseInt(rollNumbers[rollData.repeating_maneuvers_combatBase]);
 
-                finishRoll(results.rollId, {'roll1': computed});
-            });
+         //this tells if its a kh or kl
+         const typeOfRoll = eventInfo.htmlAttributes['data-attribute'];
+         console.log('rolltype', typeOfRoll);
+         const diceToRoll = (modifier) => {
+             return !modifier ? 'dice2' : 'dice3';
+         }
+
+        const templateManeuverName = `${(rollData.repeating_maneuvers_actionType).toUpperCase()} ${(rollData.repeating_maneuvers_maneuverName).toUpperCase()}` || "you need to enter the mastry name";
+        const qualityBase = parseInt(rollNumbers[rollData.repeating_maneuvers_qualityBase]);
+        const combatBase = parseInt(rollNumbers[rollData.repeating_maneuvers_combatBase]);
+        const verses = ` VS ${(rollData.repeating_maneuvers_verses).toUpperCase()}`;
+
+        // const rollTemplateData = `&{template:base} {{autoSuccessFailure=[[0]]}} {{character=${rollData.character_name}}} {{name=${templateManeuverName}}} {{verses=${verses}}} {{roll1=[[2d6 + ${qualityBase}[QUA] + ${combatBase}[COM] + ?{Modifier|0}]]}}`;
+        
+        const rollToUse = {
+            dice3:`&{template:base} {{name=${templateManeuverName}}} {{verses=${verses.toUpperCase()}}} {{character=${rollData.character_name}}} {{roll1=[[{3d6}${typeOfRoll}2+${qualityBase}[QUA] + ${combatBase}[COM]+?{Modifier|0}]]}}`,
+            dice2:`&{template:base} {{name=${templateManeuverName}}} {{verses=${verses.toUpperCase()}}} {{character=${rollData.character_name}}} {{roll1=[[2d6+${qualityBase}[QUA] + ${combatBase}[COM]+?{Modifier|0}]]}}`,
+        }
+
+        const rollThis = rollToUse[diceToRoll(typeOfRoll)];
+
+        startRoll(rollThis, (results) => {
+            console.log("results", results);
+            finishRoll(results.rollId);
+        });
     });
+
+    const getAutoSuccessFailure = (rollResults, rollExpression) => {
+        console.log("getting dice results");
+        // get the number of sides
+        const rollMax = (rollExpression.split('d'))[1];
+        console.log("rollMax", rollMax);
+        // check to see if it exists, if so is it 2? if not is it max?
+        return rollResults ? rollResults===2 ? 1 : rollResults===(rollMax*2) : 2;
+    };
 </script>
+
+
+
+<rolltemplate class="sheet-rolltemplate-base">
+    <div class="sheet-template-container" style="margin:10px 0">
+        <h3 class="sheet-header">{{character}} <span>rolling</span></h3>
+        <h3>{{name}}</h3>
+        <div class="sheet-results">
+            <h4>Result = {{roll1}} {{verses}}</h4>
+        </div>
+        {{#rollTotal() computed::autoSuccessFailure 1}}<div class="sheet-info-failure">AUTOMATIC FAILURE</div>{{/rollTotal() computed::autoSuccessFailure 1}}
+        {{#rollTotal() computed::autoSuccessFailure 2}}<div class="sheet-info-success">AUTOMATICS SUCCESS</div>{{/rollTotal() computed::autoSuccessFailure 2}}
+        
+    </div>
+</rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-test">
     <div class="sheet-template-container">
-        <h1>{{name}}</h1>
+        <h3 class="sheet-header">{{character}} <span>rolling</span></h3>
+        <h3>{{name}}</h3>
         <div class="sheet-results">
-            <h4>Result = {{roll1}}</h4>
-            <h4>Custom Result = {{computed::roll1}}</h4>
+            <h4>Result = {{roll1}}{{roll2}}{{verses}}</h4>
         </div>
     </div>
 </rolltemplate>

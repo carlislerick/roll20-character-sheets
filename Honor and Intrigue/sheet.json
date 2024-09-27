@@ -1,0 +1,48 @@
+{
+    "legacy": false,
+    "version": "0.0.1",
+    "html": "honor_and_intrigue.html",
+    "css": "honor_and_intrigue.css",
+    "authors": "Rick Carlisle",
+    "roll20userid": "5076102",
+    "instructions": "Honor + Intrigue and Basic Action Games are the intellectual property of Chris Rutkowsky, &copy; 2004. Any mention of companies, titles, characters, or authors is not a challenge to their trademarks or copyrights. Such mention is only as reference, under the Fair Use clause of the US Copyright code. Any referenced works are all the property of their respective owners.",
+    "useroptions": [
+        {
+            "attribute": "rollshowchar",
+            "displayname": "Show character name",
+            "displaytranslationkey": "show-character-name",
+            "type": "checkbox",
+            "value": "[[1]]",
+            "default": "[[1]]",
+            "description": "Character names are added to the roll template by default (PC and NPC).",
+            "descriptiontranslationkey": "char-to-templates-info"
+        },
+        {
+          "attribute": "cd_bar1_v",
+          "displayname": "BAR 1 VALUE:",
+          "displaytranslationkey": "cd-bar1-value:-u",
+          "type": "text",
+          "default": "lifebloodCurrent",
+          "description": "On Default Tokens created by doing a drop onto the virtual table top, set the Bar 1's value to this attribute.",
+          "descriptiontranslationkey": "cd-bar1-value-desc:-u"
+        },
+        {
+          "attribute": "cd_bar1_m",
+          "displayname": "BAR 1 MAX:",
+          "displaytranslationkey": "cd-bar1-max:-u",
+          "type": "text",
+          "default": "lifeblood",
+          "description": "On Default Tokens created by doing a drop onto the virtual table top, set the Bar 1's max to this attribute.",
+          "descriptiontranslationkey": "cd-bar1-max-desc:-u"
+        },
+        {
+          "attribute": "cd_bar1_l",
+          "displayname": "BAR 1 LINK:",
+          "displaytranslationkey": "cd-bar1-link:-u",
+          "type": "text",
+          "default": "lifebloodCurrent",
+          "description": "On Default Tokens created by doing a drop onto the virtual table top, link the Bar 1's value to this attribute. If set this will override all other bar settings.",
+          "descriptiontranslationkey": "cd-bar1-link-desc:-u"
+        }
+    ]
+}

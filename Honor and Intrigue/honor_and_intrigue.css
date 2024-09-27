@@ -1,7 +1,125 @@
 .root {
-    width: 800px;
+    /**width: 800px; **/
+
+    background-color: aliceblue;
+    padding: 1rem;
+
+    button {
+        border-color: darkgray;
+        font-size: 1.1rem;
+    }
 
     span {
         padding-right: 5px;
     }
+
+    textarea.textarea_default {
+        height: unset;
+    }
+
+    .diceImage {
+        font-family: 'dicefontd20';
+        display: inline;
+    }
+
+    .grid_column_2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        margin: 10px 0 20px 0;
+
+        div {
+            width:90%;
+        }
+    }
+
+    .grid_column_3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        margin: 10px 0 10px 0;
+
+
+    }
+
+    .grid_attributes {
+        margin: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr;
+
+
+    }
+
+
+
+    .button_kl {
+        border-color: crimson;
+    }
+
+    .button_kh {
+        border-color:cornflowerblue;
+    }
+
+    div.grid_attributes_inner {
+        display: grid;
+        grid-template-columns: 6rem 5rem 1fr;
+
+        input {
+            width:5px;
+        }
+    }
+
+    .section_counters {
+        margin: 20px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+
+        .attribute_advancement {
+            width: 10rem;
+        }
+
+        & > div {
+            display: grid;
+            
+            &:nth-child(2n+1){
+            justify-items: right;
+            }
+
+        }
+
+    }
+
+    .input-careerName {
+        width: 15rem;
+    }
+
+
 }
+
+.sheet-rolltemplate-base {
+    .sheet-template-container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .sheet-header {
+            color: black;
+            font-weight: 800;
+            background-color: lightsteelblue;
+            width: 100%;
+            align-self: center;
+        }
+
+        .sheet-info-success {
+            color: white;
+            background-color: lightgreen;
+            width: 100%;
+        }
+        .sheet-info-failure {
+            color: white;
+            background-color: rgb(244, 87, 87);
+            width: 100%;
+        }
+    }
+}
+
